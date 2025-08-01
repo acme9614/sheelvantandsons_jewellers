@@ -23,6 +23,15 @@ function navigateToScheme() {
   Toaster.postMessage("navigateScheme");
 }
 
+function navigateToCatalogues() {
+  Toaster.postMessage("navigateToCatalogues");
+}
+
+function navigateToQuickPurchase() {
+  Toaster.postMessage("navigateToQuickPurchase");
+}
+
+
 function navigateToBankDetails() {
   Toaster.postMessage("navigateBankDetails");
 }
@@ -105,6 +114,8 @@ function navigateToHomePage() {
     //   services start
  const items = [
       { label: "Scheme", icon: "https://cdn-icons-png.flaticon.com/128/10150/10150740.png", action: "navigateToScheme()" },
+      { label: "Catalogues", icon: "https://cdn-icons-png.flaticon.com/128/29/29341.png", action: "navigateToCatalogues()" },
+      { label: "Quick Purchase", icon: "https://cdn-icons-png.flaticon.com/128/1019/1019709.png", action: "navigateToQuickPurchase()" },
       { label: "Bank", icon: "https://cdn-icons-png.flaticon.com/128/522/522554.png", action: "navigateToBankDetails()" },
       { label: "KYC", icon: "https://cdn-icons-png.flaticon.com/128/18282/18282110.png", action: "navigateToKyc()" },
       { label: "Rate", icon: "https://cdn-icons-png.flaticon.com/128/592/592015.png", action: "navigateToRate()" },
