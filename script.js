@@ -89,6 +89,10 @@ function navigateToHomePage() {
   Toaster.postMessage("navigateToHomePage");
 }
 
+function navigateToARVirtualTryOn() {
+  Toaster.postMessage("navigateToARVirtualTryOn");
+}
+
 
 
 // heroSlider 
@@ -125,6 +129,7 @@ function navigateToHomePage() {
       { label: "Order", icon: "https://cdn-icons-png.flaticon.com/128/10597/10597732.png", action: "navigateToMyOrder()" },
       { label: "Profile", icon: "https://cdn-icons-png.flaticon.com/128/1946/1946429.png", action: "navigateToUserProfile()" },
       { label: "Gold", icon: "https://cdn-icons-png.flaticon.com/128/1473/1473430.png", action: "navigateToDigitalGold()" },
+      { label: "Virtual Try-On", icon: "assets/virtual.png", action: "navigateToARVirtualTryOn()" },
       { label: "Panchang", icon: "https://cdn-icons-png.flaticon.com/128/3013/3013143.png", action: "navigateToPanchang()" },
       { label: "Settings", icon: "https://cdn-icons-png.flaticon.com/128/2099/2099058.png", action: "navigateToSetting()" },
     ];
@@ -172,7 +177,7 @@ function navigateToHomePage() {
             <img 
               src="${item.icon}" 
               alt="${item.label}" 
-              class="absolute w-10 h-10 top-[25px] left-[30px] object-contain z-10 invert"
+              class="absolute w-10 h-10 top-[25px] left-[30px] object-contain z-10 ${item.label === 'Virtual Try-On' ? '' : 'invert'}"
             />
           </div>
           <div class=" text-sm font-semibold uppercase mt-1 text-center">
